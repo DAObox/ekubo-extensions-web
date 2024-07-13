@@ -30,9 +30,9 @@ const circular = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "dojo | Provable game engine for onchain games and autonomous worlds",
+  title: "Ekubo Community Extensions",
   description:
-    "Dojo is a provable game engine and toolchain for building onchain games and autonomous worlds.",
+    "A community curated collection of open-source extensions for Ekubo protocol.",
 };
 
 export default function RootLayout({
@@ -45,7 +45,7 @@ export default function RootLayout({
       lang="en"
       className={`${IBMPlexSans.variable} ${agrandirVariable.variable} ${circular.variable} ${agrandirBody.variable} `}
     >
-      <body className="overflow-x-hidden  bg-[#021531] text-white">
+      <body className="overflow-x-hidden  bg-[#131216] text-white">
         <Navigation />
         {children}
       </body>

@@ -8,35 +8,9 @@ import { Text } from "@/app/components/Text";
 import { useInView } from "react-intersection-observer";
 
 const tools = [
-  // {
-  //   name: "Saya",
-  //   badgeTitle: "Prover",
-  //   description:
-  //     "Here is a short paragraph about the details of this product or tool. It should be relatively short and concise, maybe 2 sentences and three lines long maximum.",
-  //   documentation: "https://book.dojoengine.org/",
-  //   icon: (
-  //     <svg
-  //       xmlns="http://www.w3.org/2000/svg"
-  //       viewBox="0 0 300 300"
-  //       fill="none"
-  //       className="w-8 sm:w-24"
-  //     >
-  //       <path
-  //         fill="#fff"
-  //         fillRule="evenodd"
-  //         d="M190.572 205.374a55.684 55.684 0 0 1-49.811 15.593l-51.88-9.675-10.768-51.719a55.686 55.686 0 0 1 14.802-50.052l16.653-16.983a55.686 55.686 0 0 1 49.811-15.593l51.88 9.676 10.768 51.718a55.689 55.689 0 0 1-14.802 50.052l-16.653 16.983Zm-88.91-103.953 79.781 15.634 17.035 79.436-79.781-15.634-17.035-79.436Z"
-  //         clipRule="evenodd"
-  //       />
-  //       <path
-  //         fill="#fff"
-  //         d="M150.179 168.366c-10.592 0-19.179-8.589-19.179-19.183 0-10.595 8.587-19.183 19.179-19.183 10.592 0 19.178 8.588 19.178 19.183 0 10.594-8.586 19.183-19.178 19.183Z"
-  //       />
-  //     </svg>
-  //   ),
-  // },
   {
-    name: "Torii",
-    badgeTitle: "Automatic Indexer",
+    name: "Oracle Extension",
+    badgeTitle: "Ekubo Inc.",
     description:
       "Torii automatically indexes your game state and exposes GraphQL and gRPC APIs for your world to consume. No longer do you need to write boilerplate code to manage your game state.",
     documentation: "https://book.dojoengine.org/toolchain/torii",
@@ -55,8 +29,8 @@ const tools = [
     ),
   },
   {
-    name: "Katana",
-    badgeTitle: "High-Performance Gaming Sequencer",
+    name: "Limit Order Extension",
+    badgeTitle: "Ekubo Inc.",
     description:
       "Katana is a high-performance sequencer for onchain game development. Spin up a local sequencer with one command and deploy your world with another.",
     documentation: "https://book.dojoengine.org/toolchain/katana",
@@ -74,46 +48,6 @@ const tools = [
         <path
           fill="#fff"
           d="M191.419 136.173c-10.592 0-19.179-8.589-19.179-19.183 0-10.595 8.587-19.183 19.179-19.183 10.592 0 19.178 8.588 19.178 19.183 0 10.594-8.586 19.183-19.178 19.183Z"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "Origami",
-    badgeTitle: "Cairo Libraries",
-    description:
-      "Origami exposes a range of pre-built components and libraries to help you build your game faster. Origami is built on top of Dojo core.",
-    documentation: "https://book.dojoengine.org/toolchain/origami",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 300 300"
-        fill="none"
-        className="w-8 sm:w-24"
-      >
-        <path
-          fill="#fff"
-          d="M149.695 178.375 50 85.709h59.389a42.02 42.02 0 0 1 27.198 9.99l66.247 56.255-25.924 25.924c-7.46 7.461-19.487 7.68-27.215.497ZM204.565 150.225l-22.968-19.9c-7.683-6.656-7.745-18.556-.131-25.291l23.099-20.435v65.626ZM146.217 178.993l-22.322-21.101v70.07l22.103-20.266c8.388-7.692 8.489-20.885.219-28.703ZM206.806 84.038v20.965c0 12.277 9.952 22.229 22.229 22.229H250l-43.194-43.194Z"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "Sozo",
-    badgeTitle: "CLI Tool",
-    description:
-      "A command line interface tool to help you manage your dojo games. Sozo helps you create new games, manage your game state, and deploy your games to networks",
-    documentation: "https://book.dojoengine.org/toolchain/sozo",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 300 300"
-        fill="none"
-        className="w-8 sm:w-24"
-      >
-        <path
-          fill="#fff"
-          d="M119.351 98.675a69.09 69.09 0 0 0 6.476 57.607l.051-.033 20.134 27.685-1.212.746c-6.162-7.591-13.846-11.871-20.923-14.138a44.698 44.698 0 0 0-10.629-1.33l-36.47-.234 25.554 35.377a43.178 43.178 0 0 0 34.733 17.896l36.3.228.016.021 8.525-26.315a60.454 60.454 0 0 0-8.616-54.181l-15.475-21.428-3.39-4.484 1.197-.768c8.394 9.956 19.377 14.034 27.979 15.335 1.014.074 2.037.114 3.068.121l36.553.241-25.564-35.391a43.181 43.181 0 0 0-34.727-17.896L126.39 77.5h.001l-7.04 21.175Z"
         />
       </svg>
     ),

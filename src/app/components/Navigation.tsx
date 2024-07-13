@@ -27,16 +27,8 @@ export const useMenuStore = create<{
 
 export const MenuLinks = [
   {
-    title: "Docs",
-    href: "/docs",
-  },
-  {
     title: "Blog",
     href: "/blog",
-  },
-  {
-    title: "Community",
-    href: "/community",
   },
   {
     title: "GitHub",
@@ -126,12 +118,8 @@ export default function Navigation() {
           </a>
         </div>
         <div>
-          <a
-            className="uppercase"
-            href={"https://book.dojoengine.org/"}
-            target="_blank"
-          >
-            <Button>docs</Button>{" "}
+          <a className="uppercase" href={"#"} target="_blank">
+            <Button className="px-6">directory</Button>{" "}
           </a>
         </div>
 

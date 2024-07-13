@@ -3,26 +3,16 @@ import { Text } from "../Text";
 import { Event, EventCard } from "./EventCard";
 
 const events: Event[] = [
-  // {
-  //   id: "string",
-  //   name: "Summer Game Jam 2024",
-  //   description: "Join the game jam and earn prizes.",
-  //   startDate: "2023-10-01",
-  //   endDate: "2023-10-11",
-  //   location: "string",
-  //   image: "background.png",
-  //   link: "string",
-  // },
   {
     id: "string",
-    name: "NYC Sensei Residency",
+    name: "Ekubo Extension Hack",
     description:
-      "Join us this summer for the Dojo Sensei Residency Program in New York City from August 5th to September 28th 🥷",
-    startDate: "2023-8-04",
-    endDate: "2023-10-01",
+      "Contribute to building next gen extensions to power the leading DEX on Starknet",
+    startDate: "2024-9-04",
+    endDate: "2024-12-02",
     location: "string",
     image: "nyc.jpeg",
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSdsCYDCC7VzpDoHKpWNBeUlz5Zg46WLpM2e6bYdKJsY0yRSIw/viewform",
+    link: "#",
   },
 ];
 

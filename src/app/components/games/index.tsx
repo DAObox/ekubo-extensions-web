@@ -51,9 +51,9 @@ export default function Games() {
               className="mb-6 text-center sm:mb-0 sm:text-left"
               textStyle="headline2"
             >
-              onchain worlds
+              ekubo extensions
             </Text>
-            <a href="https://github.com/dojoengine/awesome-dojo">
+            <a href="https://github.com/orgs/EkuboProtocol/repositories">
               <Button size={"lg"} withArrow variant={"default"}>
                 view more
               </Button>

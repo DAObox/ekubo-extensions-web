@@ -88,7 +88,7 @@ export function GitHub({ contributorImages }: { contributorImages: string[] }) {
                   />
                 </svg>
               }
-              text="Apache License"
+              text="Unlicensed"
               color="red"
             />
           </div>
@@ -96,24 +96,24 @@ export function GitHub({ contributorImages }: { contributorImages: string[] }) {
             textStyle="headline2"
             className="mb-5 w-full text-center sm:w-auto sm:text-left"
           >
-            Open Source
+            Powerful Extensions
           </Text>
           <Text
             textStyle="bodyText"
             className="mb-10  w-full text-center sm:w-auto sm:text-left"
           >
-            Dojo is built by a community of developers, designers, and artists.{" "}
+            Ekubo is built by a community of developers, designers, and artists.{" "}
             <br />
           </Text>
 
           <div className="flex w-full flex-col space-y-4 text-center sm:flex-row sm:space-x-4 sm:space-y-0">
-            <a target="_blank" href="https://github.com/dojoengine">
+            {/* <a target="_blank" href="https://github.com/dojoengine">
               <Button withArrow variant="default">
                 Contribute to dojo
               </Button>{" "}
-            </a>
+            </a> */}
             <a target="_blank" href={Socials.Discord}>
-              <Button withArrow variant="outline">
+              <Button withArrow variant="default">
                 join discord
               </Button>{" "}
             </a>

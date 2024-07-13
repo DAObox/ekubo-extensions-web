@@ -1,0 +1,49 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import zkml from './zkml.jpeg'
+
+export const article = {
+  author: 'Okhai Omotuebe',
+  date: '2023-09-05',
+  title: 'Establishing Trust in a Trustless World: Building Verifiable Reputation Systems with Orion and zkML',
+  description:
+    'With the rise of blockchain technology, there is an increasing need for trust and transparency in online interactions. Orion, an open-source framework for provable machine learning, enables developers to build verifiable on-chain ML models using zero-knowledge proofs.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+With the rise of blockchain technology, there is an increasing need for trust and transparency in online interactions. <a href="https://orion.gizatech.xyz/welcome/readme" target="_blank">Orion</a>, an open-source framework for provable machine learning, enables developers to build verifiable machine learning models using zero-knowledge proofs.
+<Image src={zkml} alt="" />
+In this article, I'll delve into how to harness the power of Orion and zkML to establish a reputation system that is not only transparent but also less biased and immutable.
+## Overview of Orion
+Orion provides the building blocks for creating end-to-end verifiable ML models. It implements cryptographic primitives and ML operators like tensor manipulation and neural networks using <a href="https://starkware.co/stark/" target="_blank">STARKs</a>.
+## Key Advantages:
+- Trust and Verifiability: Orion's zero-knowledge proofs allow reputation scores and model outputs to be cryptographically verified without revealing sensitive data. This establishes trust in the system.
+- Data Privacy: Orion uses advanced cryptography like zk-SNARKs to keep data private while still allowing verifiable computations on it. This preserves privacy.
+- Transparency: Reputation systems that are built on Orion can offer a clear and transparent way to calculate and present reputation scores, which allows users to understand how reputation scores are calculated.
+- Compatibility with <a href="https://onnx.ai/" target="_blank">ONNX</a>: Orion is built as a new ONNX Runtime, which is compatible with various machine learning frameworks like PyTorch, Tensorflow/Keras, and others. This ensures reputation systems can easily integrate with existing machine learning models and ecosystems.
+## Building a Reputation System with Orion
+Here is how Orion can be used to build a transparent on-chain reputation system:
+1. Collecting input data - This could include a number of on-chain activities like number of transactions, values transfered, smart contract interacted with, etc.
+2. Training ML models - Orion's ML operators are used to train prediction models on the reputation data.
+3. Validating model integrity - Orion verifies the accuracy and integrity of the trained ML models by generating a zkSTARK proof. This cryptographic proof validates the models without revealing any sensitive information.
+4. Querying reputation scores - Users can query the on-chain reputation system for credible scores on entities.
+## Benefits
+This approach provides a transparent reputation system that is:
+- Trustless - No reliance on a central authority is needed as everything is verified on-chain.
+- Fair - The system’s transparency allows for the detection of bias in data and models.
+- Tamper-proof - Reputation scores remain immutable due to blockchain technology.
+## Use Cases
+- Smart Contracts and Blockchain: Verifiable reputation systems integrated into smart contracts can evaluate the trustworthiness of counterparties.
+- Social Media and Content Sharing: Reputation systems can help combat fake news and misinformation. Verifiable reputations can be assigned to users and content, aiding in the promotion of reliable information and penalizing bad actors.
+- Autonomous Systems: Orion's capabilities are valuable for autonomous systems, including autonomous drones, robots, and self-driving cars. These systems need to make real-time decisions based on trustworthy models to ensure safety and reliability.
+- Government and Public Policy : Governments can use Orion to build models for policy analysis and decision support. This ensures that public policies are based on reliable and verifiable AI models.
+## Conclusion
+In conclusion, the power of Orion and zkML is set to reshape the way we establish trust in an inherently trustless digital world. By marrying blockchain technology with cutting-edge machine learning and cryptographic techniques, we have the potential to create a new paradigm of secure, transparent, and trustworthy reputation systems for the Web3 era.
+## Addition Orion Resources
+<a href="https://github.com/gizatechxyz/orion_tutorials.git" target="_blank">Orion Tutorial</a>
