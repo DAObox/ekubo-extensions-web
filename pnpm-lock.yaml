@@ -76,6 +76,9 @@ dependencies:
   react-intersection-observer:
     specifier: ^9.10.2
     version: 9.10.2(react-dom@18.0.0)(react@18.0.0)
+  react-simple-typewriter:
+    specifier: ^5.0.1
+    version: 5.0.1(react-dom@18.0.0)(react@18.0.0)
   react-use-clipboard:
     specifier: ^1.0.9
     version: 1.0.9(react-dom@18.0.0)(react@18.0.0)
@@ -5413,6 +5416,17 @@ packages:
       loose-envify: 1.4.0
       react: 18.0.0
       scheduler: 0.21.0
+    dev: false
+
+  /react-simple-typewriter@5.0.1(react-dom@18.0.0)(react@18.0.0):
+    resolution: {integrity: sha512-vA5HkABwJKL/DJ4RshSlY/igdr+FiVY4MLsSQYJX6FZG/f1/VwN4y1i3mPXRyfaswrvI8xii1kOVe1dYtO2Row==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+    dependencies:
+      react: 18.0.0
+      react-dom: 18.0.0(react@18.0.0)
     dev: false
 
   /react-use-clipboard@1.0.9(react-dom@18.0.0)(react@18.0.0):
