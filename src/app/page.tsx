@@ -1,5 +1,5 @@
+import SearchInput from "./components/SearchInput";
 import TextWriter from "./components/TextWriter";
-import { Input } from "./components/ui/input";
 
 async function getContributors(repoName: string, page = 1) {
   let request = await fetch(
@@ -47,7 +47,7 @@ export default async function Home() {
         </h2>
         <p className="text-lg text-center text-white">A community curated collection of open-source extensions for Ekubo protocol.</p>
         <div>
-          <Input placeholder="Search for extensions" className="bg-transparent focus-visible:ring-0 focus-visible:border-none" />
+          <SearchInput />
         </div>
       </div>
     </div>
