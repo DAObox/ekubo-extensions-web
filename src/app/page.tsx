@@ -1,11 +1,3 @@
-import Hero from "@/app/components/hero";
-import Games from "./components/games";
-import { Toolchain } from "./components/Toolchain";
-import { Contributors } from "./components/contributors";
-import { Footer } from "@/app/components/footer";
-import { EventRow } from "./components/events/EventRow";
-import { Partners } from "./components/contributors/Partners";
-
 async function getContributors(repoName: string, page = 1) {
   let request = await fetch(
     `https://api.github.com/repos/${repoName}/contributors?per_page=100&page=${page}`,
@@ -45,25 +37,8 @@ export default async function Home() {
   );
 
   return (
-    <div className="relative">
-      <Hero />
-      {/* <GetStarted /> */}
-      <Toolchain />
+    <div className="bg-[#131216]/95 w-full min-h-screen">
 
-      {/* <div className=" bg-gradient-to-b from-[#1A1479] to-[#021531] ">
-        <Games />
-      </div> */}
-
-      {/* <EventRow /> */}
-
-      <div className="bg-gradient-to-b from-[#021531] to-[#1A1479]">
-        {/* <Contributors contributorImages={profileImages} /> */}
-
-        <Partners />
-      </div>
-      {/* <GetStarted /> */}
-
-      {/* <Footer /> */}
     </div>
   );
 }

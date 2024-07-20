@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Navigation from "./components/Navigation";
 import "../global.css";
 import localFont from "next/font/local";
+import Navigation from "./components/Navigation";
 
 const agrandirVariable = localFont({
   src: "./fonts/Agrandir Narrow Bold.otf",
@@ -45,7 +45,7 @@ export default function RootLayout({
       lang="en"
       className={`${IBMPlexSans.variable} ${agrandirVariable.variable} ${circular.variable} ${agrandirBody.variable} `}
     >
-      <body className="overflow-x-hidden  bg-[#131216] text-white">
+      <body className="flex flex-col items-center justify-center overflow-x-hidden">
         <Navigation />
         {children}
       </body>
