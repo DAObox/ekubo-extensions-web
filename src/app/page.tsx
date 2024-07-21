@@ -1,5 +1,9 @@
+import Image from "next/image";
 import SearchInput from "./components/SearchInput";
 import TextWriter from "./components/TextWriter";
+import { Card } from "./components/ui/card";
+import { Button } from "./components/ui/button";
+import Link from "next/link";
 
 async function getContributors(repoName: string, page = 1) {
   let request = await fetch(
@@ -39,16 +43,45 @@ export default async function Home() {
     (contributor) => contributor.avatar_url,
   );
 
+  const imageLoader = ({ src, width, quality }: { src: string, width: string, quality: number }) => {
+    return `https://example.com/${src}?w=${width}&q=${quality || 75}`
+  }
+
   return (
-    <div className="bg-[#131216]/95 w-full min-h-screen pt-40 flex flex-col items-center">
+    <div className="bg-[#131216]/95 w-full min-h-screen pt-40 flex flex-col items-center space-y-5 sm:space-y-10">
       <div className="max-w-3xl px-5 space-y-5">
         <h2 className="text-[#41127E] text-center text-5xl sm:text-6xl font-extrabold">
           <TextWriter words={["Ekubo Community Extensions"]} />
         </h2>
         <p className="text-lg text-center text-white">A community curated collection of open-source extensions for Ekubo protocol.</p>
-        <div>
-          <SearchInput />
-        </div>
+        <SearchInput />
+      </div>
+      <div className="grid gap-4 sm:grid-cols-3">
+        {
+          Array.from({ length: 9 }).map((_, i) => <Link href="/" key={i}>
+            <Card className="min-h-72 w-96 p-2.5 flex flex-col justify-between hover:border-[#41127E]">
+              <div />
+              <div className="space-y-1.5">
+                <Image
+                  loading="eager"
+                  src={"/profile.png"}
+                  width={50}
+                  height={50}
+                  alt="profile"
+                  className="pb-1 rounded-full"
+                  unoptimized={true}
+                />
+                <h2 className="text-2xl text-white">Victor Omorogbe</h2>
+                <p className="text-lg text-white">A community curated collection of open-source extensions for Ekubo protocol.</p>
+                <div className="flex flex-wrap">
+                  <Button className="h-8 text-white bg-red-700 hover:bg-red-700 mr-1.5 mb-1.5">ETHCC Hackathon</Button>
+                  <Button className="h-8 text-white bg-yellow-700 hover:bg-yellow-700 mr-1.5 mb-1.5">Sepolia Testnet</Button>
+                  <Button className="h-8 text-white bg-green-700 hover:bg-green-700 mr-1.5 mb-1.5">Tool</Button>
+                </div>
+              </div>
+            </Card>
+          </Link>)
+        }
       </div>
     </div>
   );
