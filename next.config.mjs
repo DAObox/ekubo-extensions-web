@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  output: undefined,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
@@ -9,6 +9,9 @@ const nextConfig = {
     });
 
     return config;
+  },
+  images: {
+    domains: ["avatars.githubusercontent.com"],
   },
 };
 
