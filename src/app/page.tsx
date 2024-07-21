@@ -4,6 +4,7 @@ import TextWriter from "./components/TextWriter";
 import { Card } from "./components/ui/card";
 import { Button } from "./components/ui/button";
 import Link from "next/link";
+import Footer from "./components/Footer";
 
 async function getContributors(repoName: string, page = 1) {
   let request = await fetch(
@@ -56,7 +57,7 @@ export default async function Home() {
         <p className="text-lg text-center text-white">A community curated collection of open-source extensions for Ekubo protocol.</p>
         <SearchInput />
       </div>
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid flex-1 gap-4 sm:grid-cols-3">
         {
           Array.from({ length: 9 }).map((_, i) => <Link href="/" key={i}>
             <Card className="min-h-72 w-96 p-2.5 flex flex-col justify-between hover:border-[#41127E]">
@@ -83,6 +84,7 @@ export default async function Home() {
           </Link>)
         }
       </div>
+      <Footer />
     </div>
   );
 }
