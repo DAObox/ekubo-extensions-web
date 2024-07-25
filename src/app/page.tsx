@@ -50,7 +50,7 @@ export default async function Home() {
   // }
 
   return (
-    <div className="bg-[#131216]/95 w-full min-h-screen pt-40 flex flex-col items-center space-y-5 sm:space-y-10">
+    <div className="bg-[#131216]/95 w-full min-h-screen pt-40 flex flex-col items-center space-y-5 sm:space-y-10 px-5">
       <div className="max-w-3xl px-5 space-y-5">
         <h2 className="text-[#41127E] text-center text-5xl sm:text-6xl font-extrabold">
           <TextWriter words={["Ekubo Community Extensions"]} />
@@ -61,10 +61,10 @@ export default async function Home() {
       <div className="w-full max-w-6xl">
         <HomePaths />
       </div>
-      <div className="grid flex-1 gap-4 max-w-7xl sm:grid-cols-3">
+      <div className="grid flex-1 gap-x-3.5 gap-y-2 md:gap-4 max-w-7xl sm:grid-cols-2 lg:grid-cols-3">
         {
           Array.from({ length: 9 }).map((_, i) => <Link href="/" key={i}>
-            <Card className="min-h-72 w-96 p-2.5 flex flex-col justify-between hover:border-[#41127E]">
+            <Card className="min-h-72 w-full sm:w-[300px] md:w-80 xl:w-96 p-2.5 flex flex-col justify-between hover:border-[#41127E]">
               <div />
               <div className="space-y-1.5">
                 <Image

@@ -11,7 +11,7 @@ export default function HomePaths() {
     const { toast } = useToast()
     const router = useRouter()
     return (
-        <div className="flex flex-row items-center justify-between w-full">
+        <div className="flex flex-row items-center w-full overflow-x-scroll md:justify-between space-x-3.5 md:space-x-0 hide-scrollbar">
             <div className="flex flex-row items-center space-x-3.5">
                 <Link href="/">
                     <Button className="h-8 text-white bg-[#41127E] hover:bg-transparent hover:border-2 border-[#41127E]">Blog</Button>
