@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "../global.css";
 import localFont from "next/font/local";
 import Navigation from "./components/Navigation";
-import { SessionProvider } from "next-auth/react"
 import Providers from "./providers";
 import { getServerSession } from "next-auth";
+import { Toaster } from "./components/ui/toaster"
 
 const agrandirVariable = localFont({
   src: "./fonts/Agrandir Narrow Bold.otf",
@@ -53,6 +53,7 @@ export default async function RootLayout({
         <body className="flex flex-col items-center justify-center overflow-x-hidden">
           <Navigation />
           {children}
+          <Toaster />
         </body>
       </html>
     </Providers>
