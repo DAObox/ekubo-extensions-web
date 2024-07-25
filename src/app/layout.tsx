@@ -45,17 +45,17 @@ export default async function RootLayout({
 }>) {
   const session = await getServerSession()
   return (
-    <Providers session={session}>
-      <html
-        lang="en"
-        className={`${IBMPlexSans.variable} ${agrandirVariable.variable} ${circular.variable} ${agrandirBody.variable} `}
-      >
+    <html
+      lang="en"
+      className={`${IBMPlexSans.variable} ${agrandirVariable.variable} ${circular.variable} ${agrandirBody.variable} `}
+    >
+      <Providers session={session}>
         <body className="flex flex-col items-center justify-center overflow-x-hidden">
           <Navigation />
           {children}
           <Toaster />
         </body>
-      </html>
-    </Providers>
+      </Providers>
+    </html>
   );
 }

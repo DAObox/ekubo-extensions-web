@@ -7,47 +7,47 @@ import Link from "next/link";
 import Footer from "./components/Footer";
 import HomePaths from "./components/HomePaths";
 
-async function getContributors(repoName: string, page = 1) {
-  let request = await fetch(
-    `https://api.github.com/repos/${repoName}/contributors?per_page=100&page=${page}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    },
-  );
+// async function getContributors(repoName: string, page = 1) {
+//   let request = await fetch(
+//     `https://api.github.com/repos/${repoName}/contributors?per_page=100&page=${page}`,
+//     {
+//       method: "GET",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//     },
+//   );
 
-  let contributorsList = await request.json();
-  return contributorsList;
-}
+//   let contributorsList = await request.json();
+//   return contributorsList;
+// }
 
-async function getAllContributors(repoName: string) {
-  let contributors: { avatar_url: string }[] = [];
-  let page = 1;
+// async function getAllContributors(repoName: string) {
+//   let contributors: { avatar_url: string }[] = [];
+//   let page = 1;
 
-  while (true) {
-    const list = await getContributors(repoName, page);
-    if (list.length === 0) {
-      break;
-    }
-    contributors = contributors.concat(list);
-    page++;
-  }
+//   while (true) {
+//     const list = await getContributors(repoName, page);
+//     if (list.length === 0) {
+//       break;
+//     }
+//     contributors = contributors.concat(list);
+//     page++;
+//   }
 
-  return contributors;
-}
+//   return contributors;
+// }
 
 export default async function Home() {
-  const contributors = await getAllContributors("dojoengine/dojo");
+  // const contributors = await getAllContributors("dojoengine/dojo");
 
-  const profileImages = contributors.map(
-    (contributor) => contributor.avatar_url,
-  );
+  // const profileImages = contributors.map(
+  //   (contributor) => contributor.avatar_url,
+  // );
 
-  const imageLoader = ({ src, width, quality }: { src: string, width: string, quality: number }) => {
-    return `https://example.com/${src}?w=${width}&q=${quality || 75}`
-  }
+  // const imageLoader = ({ src, width, quality }: { src: string, width: string, quality: number }) => {
+  //   return `https://example.com/${src}?w=${width}&q=${quality || 75}`
+  // }
 
   return (
     <div className="bg-[#131216]/95 w-full min-h-screen pt-40 flex flex-col items-center space-y-5 sm:space-y-10">

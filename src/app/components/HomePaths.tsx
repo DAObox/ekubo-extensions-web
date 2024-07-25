@@ -5,7 +5,6 @@ import { Button } from "./ui/button";
 import { useToast } from "@/app/components/ui/use-toast"
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { ToastAction } from "@/app/components/ui/toast"
 
 export default function HomePaths() {
     const session = useSession();
@@ -27,11 +26,11 @@ export default function HomePaths() {
             <div className="flex flex-row items-center space-x-3.5">
                 <Button
                     className="h-8 text-white bg-[#41127E] hover:bg-transparent hover:border-2 border-[#41127E]"
-                    onClick={() => {
+                    onClick={session.data?.user?.name == undefined ? () => {
                         toast({
                             title: "Please sign in to submit a hook",
                         })
-                    }}
+                    } : () => router.push("/submit-hook/step-one")}
                 >Submit a hook 🚀</Button>
                 <Link href="/">
                     <Button className="h-8 text-white bg-[#41127E] hover:bg-transparent hover:border-2 border-[#41127E]">Dashboard 🔒</Button>
