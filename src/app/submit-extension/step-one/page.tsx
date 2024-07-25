@@ -1,3 +1,4 @@
+import StepOneForm from "@/app/components/add-extension-forms/step-one-form";
 import { Button } from "@/app/components/ui/button";
 import Link from "next/link";
 
@@ -18,6 +19,7 @@ export default async function SubmitHook() {
                         </div>
                         <p className="text-center text-white">Please ensure your hook adheres to the standards and guidelines of the Ekubo extensions community.</p>
                     </div>
+                    <StepOneForm />
                 </div>
             </div>
         </div>
