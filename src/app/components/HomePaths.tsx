@@ -30,7 +30,7 @@ export default function HomePaths() {
                         toast({
                             title: "Please sign in to submit a hook",
                         })
-                    } : () => router.push("/submit-hook/step-one")}
+                    } : () => router.push("/submit-extension/step-one")}
                 >Submit an extension 🚀</Button>
                 <Link href="/">
                     <Button className="h-8 text-white bg-[#41127E] hover:bg-transparent hover:border-2 border-[#41127E]">Dashboard 🔒</Button>
