@@ -16,8 +16,10 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { Textarea } from "../ui/textarea"
+import { useRouter } from "next/navigation"
 
 export default function StepOneForm() {
+    const router = useRouter()
     const formSchema = z.object({
         name: z.string().min(2, {
             message: "Username must be at least 2 characters.",
@@ -39,6 +41,7 @@ export default function StepOneForm() {
     })
     function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values)
+        router.push("/submit-extension/step-two")
     }
     return (
         <Form {...form}>
@@ -69,7 +72,7 @@ export default function StepOneForm() {
                                 <Textarea placeholder="Write a description of your extension. This will be displayed in the marketplace" {...field} className="w-full text-white bg-transparent focus-visible:ring-0" />
                             </FormControl>
                             <FormDescription className="text-white">
-                                Provide a description for your hook.
+                                Provide a description for your extension.
                             </FormDescription>
                             <FormMessage className="text-red-700" />
                         </FormItem>
@@ -82,16 +85,16 @@ export default function StepOneForm() {
                         <FormItem>
                             <FormLabel className="text-white">Website</FormLabel>
                             <FormControl>
-                                <Input placeholder="Enter the website URL for your hook." {...field} className="w-full text-white bg-transparent focus-visible:ring-0" />
+                                <Input placeholder="Enter the website URL for your extension." {...field} className="w-full text-white bg-transparent focus-visible:ring-0" />
                             </FormControl>
                             <FormDescription className="text-white">
-                                Enter the website URL for your hook.
+                                Enter the website URL for your extension.
                             </FormDescription>
                             <FormMessage className="text-red-700" />
                         </FormItem>
                     )}
                 />
-                <Button type="submit" className="h-8 text-white bg-[#41127E] hover:bg-transparent hover:border-2 border-[#41127E]">Submit extension details</Button>
+                <Button type="submit" className="h-8 text-white bg-[#41127E] hover:bg-transparent hover:border-2 border-[#41127E]">Next</Button>
             </form>
         </Form>
     )
