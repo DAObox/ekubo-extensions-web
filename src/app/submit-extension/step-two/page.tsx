@@ -10,7 +10,7 @@ export default async function StepTwo() {
                 <div className="flex flex-col items-start w-full h-full max-w-3xl">
                     <div className="space-y-3.5">
                         <div className="flex flex-row items-center justify-between w-full">
-                            <Step current={2} max={4} />
+                            <Step current={2} max={2} />
                             <h3 className="text-xl text-white sm:text-3xl">Add an extension</h3>
                             <Link href="/">
                                 <Button className="h-8 text-white bg-[#41127E] hover:bg-transparent hover:border-2 border-[#41127E]">Go back</Button>
