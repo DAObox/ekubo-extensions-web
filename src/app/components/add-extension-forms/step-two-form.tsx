@@ -18,7 +18,14 @@ import { useRouter } from "next/navigation"
 
 import { Button } from "../../components/ui/button"
 
-import { useState } from "react"
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "../../components/ui/select"
+
 
 export default function StepTwoForm() {
     const router = useRouter()
@@ -72,6 +79,29 @@ export default function StepTwoForm() {
                             <FormLabel className="text-white">Deployment address</FormLabel>
                             <FormControl>
                                 <Input placeholder="0x1234..." {...field} className="w-full text-white bg-transparent focus-visible:ring-0" />
+                            </FormControl>
+                            <FormDescription className="text-white">
+                                Enter the address of your deployed hook.
+                            </FormDescription>
+                            <FormMessage className="text-red-700" />
+                        </FormItem>
+                    )} />
+                <FormField
+                    control={form.control}
+                    name="network"
+                    render={({ field }) => (
+                        <FormItem className="w-full">
+                            <FormLabel className="text-white">Network</FormLabel>
+                            <FormControl className="w-full">
+                                <Select {...field} onValueChange={(value) => form.setValue("network", value)}>
+                                    <SelectTrigger className="w-full font-normal text-white">
+                                        <SelectValue placeholder="Select a network" className="font-normal" />
+                                    </SelectTrigger>
+                                    <SelectContent className="bg-[#131216]">
+                                        <SelectItem value="mainnet" className="hover:bg-[#41127E]">Mainnet</SelectItem>
+                                        <SelectItem value="sepolia" className="hover:bg-[#41127E]">Sepolia</SelectItem>
+                                    </SelectContent>
+                                </Select>
                             </FormControl>
                             <FormDescription className="text-white">
                                 Enter the address of your deployed hook.
