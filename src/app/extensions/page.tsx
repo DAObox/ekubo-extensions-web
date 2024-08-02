@@ -48,11 +48,11 @@ export default function Extensions() {
                                             <SelectValue placeholder="Select a network" className="font-normal" />
                                         </SelectTrigger>
                                         <SelectContent className="bg-[#131216] border-[#41127E]">
-                                            <SelectItem value="mainnet" className="hover:bg-[#41127E]">Cairo</SelectItem>
-                                            <SelectItem value="sepolia" className="hover:bg-[#41127E]">StarknetJS</SelectItem>
-                                            <SelectItem value="sepolia" className="hover:bg-[#41127E]">Starknet React</SelectItem>
-                                            <SelectItem value="sepolia" className="hover:bg-[#41127E]">Typescript</SelectItem>
-                                            <SelectItem value="sepolia" className="hover:bg-[#41127E]">Dojo</SelectItem>
+                                            <SelectItem value="cairo" className="hover:bg-[#41127E]">Cairo</SelectItem>
+                                            <SelectItem value="starknetjs" className="hover:bg-[#41127E]">StarknetJS</SelectItem>
+                                            <SelectItem value="starket-react" className="hover:bg-[#41127E]">Starknet React</SelectItem>
+                                            <SelectItem value="typescript" className="hover:bg-[#41127E]">Typescript</SelectItem>
+                                            <SelectItem value="dojo" className="hover:bg-[#41127E]">Dojo</SelectItem>
                                         </SelectContent>
                                     </Select>
                                 </div>
